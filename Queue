@@ -10,22 +10,25 @@ namespace Queue
         static void Main(string[] args)
         {
             var queue = new Queue();
-            queue.Enqueue(new Person("Kate", 15));
-            queue.Enqueue(new Person("Sam", 15));
-            queue.Enqueue(new Person("Alice", 17));
-            queue.Enqueue(new Person("Tom", 11));
+            queue.Enqueue(new Person("Маша", 18));
+            queue.Enqueue(new Person("Нина", 10));
+            queue.Enqueue(new Person("Алиса", 99));
+            queue.Enqueue(new Person("Даша", 11));
             queue.Print();
 
             Console.WriteLine();
             var firstItem = queue.Dequeue();
             Console.Write($"Извлеченный элемент: ");
-            firstItem.Print(); // Извлеченный элемент: Name: Kate Age: 15
+            firstItem.Print(); // Извлеченный элемент: Name: Маша Age: 18
+            
             var secondItem = queue.Dequeue();
             Console.Write($"Извлеченный элемент: ");
-            secondItem.Print(); // Извлеченный элемент: Name: Sam Age: 15
+            secondItem.Print(); // Извлеченный элемент: Name: Нина Age: 10
             Console.WriteLine();
+            
             Console.WriteLine("Очередь после извлечения первых двух эелементов");
             queue.Print();
+            
             queue = new Queue();
             var Item = queue.Peak(); //null
             queue.Print();
